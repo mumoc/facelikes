@@ -1,0 +1,7 @@
+%h1 
+	=@page.name
+	-@albums.each do |album|
+		%p
+			=album.identifier
+			=album.name
+			=album.photos.count
