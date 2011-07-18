@@ -4,8 +4,8 @@
     -@album_photos.each do |album|
       %li
         = album[:album_name]
-        %ul
-          - album[:photo].each_with_index do |photo,index|
-            %li
-              = photo[:likes_count]
-              = link_to "#{photo[:photo_id]}",photo[:link]
+        -#%ul
+        -#  - album[:photo].each_with_index do |photo,index|
+        -#    %li
+        -#      = photo[:likes_count]
+        -#      = link_to "#{photo[:photo_id]}",photo[:link]
