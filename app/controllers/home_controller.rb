@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     acc_tok = my_app.get_access_token(config['production']['client_secret'])
     @page = FbGraph::Page.new(config['production']['page_id'], :access_token => acc_tok)
 
-    all_albums = @page.albums(:fields => "id")
+    all_albums = @page.albums(:fields => "id,name")
     interested_albums = ['241486485875905','240961662595054','240424745982079']
 
     @album_photos = []
@@ -23,6 +23,7 @@ class HomeController < ApplicationController
               photo = {:photo_id => p.identifier, :likes_count => count, :link => p.link}
               photos_with_likes << photo
             end
+            photos_with_likes.sort! {|a,b| a[:likes_count] <=> b[:likes_count]}.reverse!
           end
         end
         @album_photos << {:album_id => album.identifier, :album_name => album.name, :photo => photos_with_likes}

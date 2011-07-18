@@ -7,6 +7,5 @@
         %ul
           - album[:photo].each_with_index do |photo,index|
             %li{:style => "color:black; background-color:white; list-style:none; padding:0px;"}
-              = index
               = photo[:likes_count]
               = link_to "#{photo[:photo_id]}",photo[:link]
