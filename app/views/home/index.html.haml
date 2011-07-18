@@ -1,7 +1,11 @@
 %h1 
-	=@page.name
-	-@albums.each do |album|
-		%p
-			=album.identifier
-			=album.name
-			=album.photos.count
+  =@page.name
+  %ul
+    -@album_photos.each do |album|
+      %li
+        = album[:album_name]
+        %ul
+          - album[:photo].each_with_index do |photo,index|
+            %li
+              = photo[:likes_count]
+              = link_to "#{photo[:photo_id]}",photo[:link]

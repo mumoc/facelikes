@@ -3,17 +3,47 @@ class HomeController < ApplicationController
     config = YAML::load(File.open("#{RAILS_ROOT}/config/facebook.yml"))
     my_app = FbGraph::Application.new(config['production']['app_id'])
     acc_tok = my_app.get_access_token(config['production']['client_secret'])
-    puts acc_tok
     @page = FbGraph::Page.new(config['production']['page_id'], :access_token => acc_tok).fetch
-    @albums = @page.albums
-    @photos = {}
-    @albums.each do |album|
-      photos = {:album_name => album.name, :photos => album.photos}
-      @photos.merge photos
+
+
+    all_albums = @page.albums
+    interested_albums = ['241486485875905', '240961662595054', '240424745982079']
+
+    @album_photos = []
+
+    all_albums.each do |album|
+      if interested_albums.include? album.identifier
+        photos_with_likes = []
+        photos = album.photos
+
+        (1..8).each do
+          unless photos.empty?
+            photos.each do |p|
+              likes = p.likes
+              count = 0
+              like = 1
+
+              (1..10).each do
+                if like != 0
+                  unless likes.empty?
+                    count = count + likes.count
+                  else
+                    like = 0
+                  end
+                  likes = likes.next
+                end
+              end
+
+              if count > 0
+                photo = {:photo_id => p.identifier, :likes_count => count, :link => p.link}
+                photos_with_likes << photo
+              end
+            end
+          end
+          photos = photos.next
+        end
+        @album_photos << {:album_id => album.identifier, :album_name => album.name, :photo => photos_with_likes}
+      end
     end
-   # events = @page.events.sort_by{|e| e.start_time}
-    #@upcoming_events = events.find_all{|e| e.start_time >= Time.now}
-    #@past_events = events.find_all{|e| e.start_time < Time.now}.reverse
-    
   end
 end
