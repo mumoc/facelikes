@@ -15,32 +15,38 @@ class HomeController < ApplicationController
       if interested_albums.include? album.identifier
         photos_with_likes = []
         photos = album.photos
-
+        phot = 1
         (1..8).each do
-          unless photos.empty?
-            photos.each do |p|
-              likes = p.likes
-              count = 0
-              like = 1
+          if phot != 0
+            unless photos.empty?
+              photos.each do |p|
+                likes = p.likes
+                count = 0
+                like = 1
 
-              (1..10).each do
-                if like != 0
-                  unless likes.empty?
-                    count = count + likes.count
-                  else
-                    like = 0
+                (1..10).each do
+                  if like != 0
+                    unless likes.empty?
+                      count = count + likes.count
+                    end
+                    likes = likes.next
+                    if likes.empty?
+                      like = 0
+                    end
                   end
-                  likes = likes.next
+                end
+
+                if count > 0
+                  photo = {:photo_id => p.identifier, :likes_count => count, :link => p.link}
+                  photos_with_likes << photo
                 end
               end
-
-              if count > 0
-                photo = {:photo_id => p.identifier, :likes_count => count, :link => p.link}
-                photos_with_likes << photo
-              end
+            end
+            photos = photos.next
+            if photos.empty?
+              phot = 0
             end
           end
-          photos = photos.next
         end
         @album_photos << {:album_id => album.identifier, :album_name => album.name, :photo => photos_with_likes}
       end
