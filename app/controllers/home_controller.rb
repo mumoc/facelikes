@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     all_albums.each do |album|
       if interested_albums.include? album.identifier
         photos_with_likes = []
-        photos = album.photos(:fields => "id,link", :limit => 200)
+        photos = album.photos(:fields => "id,link", :limit => 201)
         unless photos.empty?
           photos.each do |p|
             count = 0
