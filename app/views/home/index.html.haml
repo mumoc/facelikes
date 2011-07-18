@@ -1,11 +1,11 @@
 %h1 
   =@page.name
-  %ul
+  %ul{:style => "list-style:none; border: 1px solid black; border-radius: 5px; padding:0px;"}
     -@album_photos.each do |album|
-      %li
+      %li{:style => "color:white; background-color: red; border-bottom: 1px solid white;"}
         = album[:album_name]
-        -#%ul
-        -#  - album[:photo].each_with_index do |photo,index|
-        -#    %li
-        -#      = photo[:likes_count]
-        -#      = link_to "#{photo[:photo_id]}",photo[:link]
+        %ul
+          - album[:photo].each_with_index do |photo,index|
+            %li{:style => "color:black; background-color:white; list-style:none; padding:0px;"}
+              -#= photo[:likes_count]
+              = link_to "#{photo[:photo_id]}",photo[:link]
