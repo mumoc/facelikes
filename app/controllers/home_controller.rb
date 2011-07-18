@@ -20,7 +20,7 @@ class HomeController < ApplicationController
             likes = p.likes(:fields => "id",:limit => 200)
             count = likes.size unless likes.empty?
             if count > 0
-              photo = {:photo_id => p.identifier, :likes_count => 0, :link => p.link}
+              photo = {:photo_id => p.identifier, :likes_count => count, :link => p.link}
               photos_with_likes << photo
             end
           end
