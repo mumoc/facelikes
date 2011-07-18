@@ -5,28 +5,25 @@ class HomeController < ApplicationController
     acc_tok = my_app.get_access_token(config['production']['client_secret'])
     @page = FbGraph::Page.new(config['production']['page_id'], :access_token => acc_tok)
 
-    all_albums = @page.albums
-    interested_albums = ['241486485875905', '240961662595054', '240424745982079']
+    all_albums = @page.albums(:fields => "id")
+    interested_albums = ['241486485875905','240961662595054','240424745982079']
 
     @album_photos = []
 
     all_albums.each do |album|
       if interested_albums.include? album.identifier
         photos_with_likes = []
-        photos = album.photos(:limit => 200)
+        photos = album.photos(:fields => "id,link", :limit => 200)
         unless photos.empty?
           photos.each do |p|
-            likes = p.likes(:limit => 100)
             count = 0
-            unless likes.empty?
-              count = count + likes.size
+            likes = p.likes(:fields => "id",:limit => 200)
+            count = likes.size unless likes.empty?
+            if count > 0
+              photo = {:photo_id => p.identifier, :likes_count => 0, :link => p.link}
+              photos_with_likes << photo
             end
           end
-        end
-
-        if count > 0
-          photo = {:photo_id => p.identifier, :likes_count => 0, :link => p.link}
-          photos_with_likes << photo
         end
         @album_photos << {:album_id => album.identifier, :album_name => album.name, :photo => photos_with_likes}
       end
