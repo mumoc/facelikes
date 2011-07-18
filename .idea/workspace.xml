@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7215b728-a729-4efa-8880-da8e7a72b5ea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.haml" afterPath="$PROJECT_DIR$/app/views/home/index.html.haml" />
     </list>
     <ignored path="facelikes.iws" />
@@ -30,7 +29,7 @@
       <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="62" selection-start="553" selection-end="553" vertical-scroll-proportion="0.35714287">
+            <state line="17" column="16" selection-start="398" selection-end="398" vertical-scroll-proportion="0.30357143">
               <folding />
             </state>
           </provider>
@@ -373,7 +372,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="62" selection-start="553" selection-end="553" vertical-scroll-proportion="0.35714287">
+        <state line="17" column="16" selection-start="398" selection-end="398" vertical-scroll-proportion="0.30357143">
           <folding />
         </state>
       </provider>
