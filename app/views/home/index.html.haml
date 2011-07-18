@@ -5,14 +5,7 @@
       %li
         = album[:album_name]
         %ul
-          %li
-            %div
-              Likes Count:
-            %div
-              Image Link:
           - album[:photo].each_with_index do |photo,index|
-            %li.row.odd
-              %div#likes
-                = photo[:likes_count]
-              %div#link
-                = link_to "#{photo[:photo_id]}",photo[:link]
+            %li
+              = photo[:likes_count]
+              = link_to "#{photo[:photo_id]}",photo[:link]
