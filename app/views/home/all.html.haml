@@ -3,7 +3,11 @@
     %li
       = album[:album_name]
       %ul
+        =content= ''
         - album[:photo].each do |photo|
           %li
             = photo[:likes_count]
             = link_to photo[:photo_id], photo[:link]
+          - content += "['#{photo[:photo_id]}','#{album[:album_name]}'],"
+        %li
+          = content
