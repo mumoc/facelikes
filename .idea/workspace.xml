@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7215b728-a729-4efa-8880-da8e7a72b5ea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/facelikes.iml" afterPath="$PROJECT_DIR$/.idea/facelikes.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/all.html.haml" afterPath="$PROJECT_DIR$/app/views/home/all.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.haml" afterPath="$PROJECT_DIR$/app/views/home/index.html.haml" />
     </list>
     <ignored path="facelikes.iws" />
@@ -33,7 +29,7 @@
       <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="11" selection-start="499" selection-end="499" vertical-scroll-proportion="0.3392857">
+            <state line="111" column="15" selection-start="1912" selection-end="1912" vertical-scroll-proportion="1.9821428">
               <folding />
             </state>
           </provider>
@@ -529,7 +525,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="11" selection-start="499" selection-end="499" vertical-scroll-proportion="0.3392857">
+        <state line="111" column="15" selection-start="1912" selection-end="1912" vertical-scroll-proportion="1.9821428">
           <folding />
         </state>
       </provider>

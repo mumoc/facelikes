@@ -3,7 +3,7 @@
     = image_tag "/images/header.jpg"
   .content
     %ul
-      %li
+      %li.winner
         .photo
           = image_tag @winner[:source]
           .likes
@@ -19,9 +19,11 @@
       - @top_ten.each do |photo|
         %li.photo_looser
           = image_tag photo[:picture]
-          = photo[:likes_count]
-          likes
-          = link_to photo[:link], photo[:link]
+          #likes
+            = photo[:likes_count]
+            likes
+          #link
+            = link_to "Ver Foto", photo[:link]
 :css
   .header{
     img{
@@ -37,6 +39,9 @@
     color:white;
   }
 
+  li.winner{
+    text-align:center;
+  }
   div.container{
     background-color: #0080af;
 
@@ -50,16 +55,15 @@
     text-align: center;
   }
 
-
-  img{
-    border: 5px solid white;
-  }
   .photo{
     border-bottom: 2px solid white;
     text-align: left;
     width:720px;
     margin-bottom: 15px;
     padding-bottom: 10px;
+    img{
+      border: 5px solid white;
+    }
   }
 
   .photo_looser{
@@ -83,6 +87,9 @@
     font-size: 5em;
     padding-left: 2px;
     font-family: arial;
+    img{
+      border: 5px solid white;
+    }
   }
 
   .album{
@@ -97,4 +104,11 @@
     color:white;
     font-size:.8em;
     padding-left: 2px;
+  }
+
+  #likes{
+    font-sixe: 1.2em;
+    img{
+      border: 2px solid white;
+    }
   }
