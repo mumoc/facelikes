@@ -7,16 +7,16 @@
         %li.wrap
           .photo
             = image_tag @winner[:source]
-          .likes
-            = @winner[:likes_count]
-            likes
-          .album
-            Fotos de Para todo hay FANS -
-          .album
-            Gana un Ipod Nano con "Para Todo Hay Fans"
-            = "(Parte #{@winner[:album]})"
-          .link
-            = link_to @winner[:link], @winner[:link]
+            .likes
+              = @winner[:likes_count]
+              likes
+            .album
+              Fotos de Para todo hay FANS -
+            .album
+              Gana un Ipod Nano con "Para Todo Hay Fans"
+              = "(Parte #{@winner[:album]})"
+            .link
+              = link_to @winner[:link], @winner[:link]
       - @top_ten.each do |photo|
         %li.photo_looser
           = image_tag photo[:picture]
@@ -53,7 +53,6 @@
     text-align:center;
     padding-bottom: 10px;
     border-bottom: 2px solid white;
-    width: 60%;
     margin: 0px auto;
   }
   #winner{
@@ -67,6 +66,7 @@
   }
   .photo{
     text-align:center;
+    width:100%;
   }
   .photo img{
     border: 5px solid white;
