@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7215b728-a729-4efa-8880-da8e7a72b5ea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.haml" afterPath="$PROJECT_DIR$/app/views/home/index.html.haml" />
     </list>
     <ignored path="facelikes.iws" />
@@ -30,7 +29,7 @@
       <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="21" selection-start="661" selection-end="661" vertical-scroll-proportion="0.48214287">
+            <state line="54" column="16" selection-start="964" selection-end="964" vertical-scroll-proportion="0.64285713">
               <folding />
             </state>
           </provider>
@@ -488,7 +487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="21" selection-start="661" selection-end="661" vertical-scroll-proportion="0.48214287">
+        <state line="54" column="16" selection-start="964" selection-end="964" vertical-scroll-proportion="0.64285713">
           <folding />
         </state>
       </provider>
