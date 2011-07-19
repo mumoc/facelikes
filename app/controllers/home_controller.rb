@@ -17,7 +17,7 @@ class HomeController < ApplicationController
         unless photos.empty?
           photos.each do |p|
             count = 0
-            likes = p.likes(:fields => "id",:limit => 200)
+            likes = p.likes(:fields => "id",:limit => 300)
             count = likes.size unless likes.empty?
             if count > 0
               photo = {:photo_id => p.identifier, :likes_count => count, :link => p.link}
@@ -30,19 +30,21 @@ class HomeController < ApplicationController
 
       end
     end
-    render "/all"
+   render "home/all"
   end
 
   def index
-    top = [["240950195929534", "I"],["240435805980973", "I"],["240586565965897", "I"],["240949419262945", "I"],["240961939261693", "II"],
-            ["241061669251720", "II"],["240972502593970", "II"],["241601965864357", "III"],["241514569206430", "III"],["241565062534714", "III"]]
+    top = [["240949419262945", "I"],["240950195929534", "I"],["240435805980973", "I"],["240586565965897", "I"],["240961939261693", "II"],
+            ["241601965864357", "I"],["241061669251720", "II"],["241514569206430", "III"],["240972502593970", "III"],["241119032579317", "III"]]
     @top_ten = []
     top.each do |photo|
-      p = FbGraph::Photo.fetch(photo[0],:fields => "id,link,source")
-      count = p.likes(:limit => 200).count
-      photo_with_likes = {:photo_id => p.identifier, :album => photo[1], :link => p.link, :likes_count => count, :source => p.source }
+      p = FbGraph::Photo.fetch(photo[0],:fields => "id,link,images")
+      count = p.likes(:limit => 400).count
+      photo_with_likes = {:photo_id => p.identifier, :album => photo[1], :link => p.link, :likes_count => count, :source => p.images[0].source, :picture => p.images[2].source}
       @top_ten << photo_with_likes
-       @top_ten.sort! {|a,b| a[:likes_count] <=> b[:likes_count]}.reverse!
     end
+    @top_ten.sort! {|a,b| a[:likes_count] <=> b[:likes_count]}
+    @winner = @top_ten.pop
+    @top_ten.reverse!
   end
 end
