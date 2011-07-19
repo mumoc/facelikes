@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7215b728-a729-4efa-8880-da8e7a72b5ea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/all.html.haml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/home/top_ten.html.haml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.haml" afterPath="$PROJECT_DIR$/app/views/home/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="facelikes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +29,7 @@
       <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="28" selection-start="814" selection-end="814" vertical-scroll-proportion="0.78571427">
+            <state line="54" column="98" selection-start="938" selection-end="938" vertical-scroll-proportion="0.96428573">
               <folding />
             </state>
           </provider>
@@ -52,7 +47,7 @@
       <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="5" selection-start="2042" selection-end="2045" vertical-scroll-proportion="-20.444445">
+            <state line="46" column="99" selection-start="2045" selection-end="2045" vertical-scroll-proportion="-20.444445">
               <folding />
             </state>
           </provider>
@@ -61,7 +56,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="32" selection-start="97" selection-end="97" vertical-scroll-proportion="-0.8888889">
+            <state line="4" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="-1.7777778">
               <folding />
             </state>
           </provider>
@@ -508,14 +503,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="97" selection-end="97" vertical-scroll-proportion="-0.8888889">
+        <state line="4" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="-1.7777778">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="5" selection-start="2042" selection-end="2045" vertical-scroll-proportion="-20.444445">
+        <state line="46" column="99" selection-start="2045" selection-end="2045" vertical-scroll-proportion="-20.444445">
           <folding />
         </state>
       </provider>
@@ -529,7 +524,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="28" selection-start="814" selection-end="814" vertical-scroll-proportion="0.78571427">
+        <state line="54" column="98" selection-start="938" selection-end="938" vertical-scroll-proportion="0.96428573">
           <folding />
         </state>
       </provider>
