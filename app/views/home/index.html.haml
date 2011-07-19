@@ -1,6 +1,60 @@
-%h1
-  %ul{:style => "list-style:none; border: 1px solid black; border-radius: 5px; padding:0px;"}
-    - @top_ten.each do |photo|
-      %li{:style => "color:black; background-color:white; list-style:none; padding:0px;"}
-        = photo[:likes_count]
-        = link_to "#{photo[:photo_id]}",photo[:link]
+.container
+  .header
+    %h1
+      Para todo hay fans
+  .content
+    %ul
+      - @top_ten.each do |photo|
+        %li
+          .photo
+            = image_tag photo[:source]
+            .likes
+              = photo[:likes_count]
+              likes
+            .album
+              Fotos de Para todo hay FANS -
+            .album
+              Gana un Ipod Nano con "Para Todo Hay Fans"
+              = "(Parte #{photo[:album]})"
+            .link
+              = link_to photo[:link]
+:css
+  li{
+   list-style:none;
+  }
+
+  div.container{
+    background-color: #0080af;
+
+  }
+
+  div.header{
+    background-color: #003662;
+  }
+  div.content{
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+  }
+
+
+  .photo{
+    border-bottom: 2px solid white;
+    text-align: left;
+    width:720px;
+    margin-bottom: 15px;
+  }
+
+  .likes{
+    color: white;
+    font-size: 2em;
+  }
+
+  .album{
+    color:white;
+    font-size: 1em;
+  }
+
+  .link{
+    color:white;
+    font-size:.8em;
+  }

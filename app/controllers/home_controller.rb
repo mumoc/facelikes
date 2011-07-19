@@ -33,13 +33,13 @@ class HomeController < ApplicationController
 #  end
 
   def index
-    top = ["240950195929534","240435805980973","240586565965897","240949419262945","240961939261693",
-            "241061669251720","240972502593970","241601965864357","241514569206430","241565062534714"]
+    top = [["240950195929534", "I"],["240435805980973", "I"],["240586565965897", "I"],["240949419262945", "I"],["240961939261693", "II"],
+            ["241061669251720", "II"],["240972502593970", "II"],["241601965864357", "III"],["241514569206430", "III"],["241565062534714", "III"]]
     @top_ten = []
     top.each do |photo|
-      p = FbGraph::Photo.fetch(photo,:fields => "id,link")
+      p = FbGraph::Photo.fetch(photo[0],:fields => "id,link,source")
       count = p.likes(:limit => 200).count
-      photo_with_likes = {:photo_id => p.identifier, :link => p.link, :likes_count => count }
+      photo_with_likes = {:photo_id => p.identifier, :album => photo[1], :link => p.link, :likes_count => count, :source => p.source }
       @top_ten << photo_with_likes
        @top_ten.sort! {|a,b| a[:likes_count] <=> b[:likes_count]}.reverse!
     end
