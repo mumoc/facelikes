@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7215b728-a729-4efa-8880-da8e7a72b5ea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.haml" afterPath="$PROJECT_DIR$/app/views/home/index.html.haml" />
     </list>
     <ignored path="facelikes.iws" />
@@ -30,7 +29,7 @@
       <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="10" selection-start="401" selection-end="401" vertical-scroll-proportion="0.034334764">
+            <state line="58" column="4" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.6180258">
               <folding />
             </state>
           </provider>
@@ -436,7 +435,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="10" selection-start="401" selection-end="401" vertical-scroll-proportion="0.034334764">
+        <state line="58" column="4" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.6180258">
           <folding />
         </state>
       </provider>

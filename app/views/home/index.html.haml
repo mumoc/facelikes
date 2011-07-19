@@ -2,20 +2,21 @@
   .header
     = image_tag "/images/header.jpg"
   .content
-    %ul.winner
-      %li
-        .photo
-          = image_tag @winner[:source]
-        .likes
-          = @winner[:likes_count]
-          likes
-        .album
-          Fotos de Para todo hay FANS -
-        .album
-          Gana un Ipod Nano con "Para Todo Hay Fans"
-          = "(Parte #{@winner[:album]})"
-        .link
-          = link_to @winner[:link], @winner[:link]
+    %ul
+      %li.wrap
+        #winner
+          .photo
+            = image_tag @winner[:source]
+          .likes
+            = @winner[:likes_count]
+            likes
+          .album
+            Fotos de Para todo hay FANS -
+          .album
+            Gana un Ipod Nano con "Para Todo Hay Fans"
+            = "(Parte #{@winner[:album]})"
+          .link
+            = link_to @winner[:link], @winner[:link]
       - @top_ten.each do |photo|
         %li.photo_looser
           = image_tag photo[:picture]
@@ -45,7 +46,7 @@
     color:white;
   }
 
-  ul.winner{
+  li.wrap{
     text-align:center;
   }
 
@@ -54,30 +55,16 @@
     text-align: center;
   }
 
-  .photo{
-    border-bottom: 2px solid white;
-    text-align: left;
-    width:720px;
+  #winner{
     margin-bottom: 15px;
     padding-bottom: 10px;
-    img{
-      border: 5px solid white;
-    }
+    border-bottom: 2px solid white;
   }
-
-  .photo_looser{
-    width: 26%;
-    display: inline-block;
-    color: white;
+  .photo{
     text-align:center;
-    padding:2px;
-    img{
-      border:2px solid white;
-    }
-    a{
-      text-decoration:none;
-      color:white;
-    }
+  }
+  .photo img{
+    border: 5px solid white;
   }
 
   .likes{
@@ -86,9 +73,7 @@
     font-size: 5em;
     padding-left: 2px;
     font-family: arial;
-    img{
-      border: 5px solid white;
-    }
+    text-align:left;
   }
 
   .album{
@@ -97,17 +82,32 @@
     font-size: 1.5em;
     padding-left: 2px;
     font-family: arial;
+    text-align:left;
   }
 
   .link{
     color:white;
     font-size:.8em;
     padding-left: 2px;
+    text-align:left;
+  }
+
+  .photo_looser{
+    width: 26%;
+    display: inline-block;
+    color: white;
+    text-align:center;
+    padding:2px;
+  }
+
+  .photo_looser img{
+    border:2px solid white;
   }
 
   #likes{
-    font-sixe: 1.2em;
-    img{
-      border: 2px solid white;
-    }
+    font-sixe: 1.8em;
+    font-weight: bold;
+  }
+  #likes img{
+    border: 2px solid white;
   }
