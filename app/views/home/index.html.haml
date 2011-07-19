@@ -1,11 +1,7 @@
-%h1 
-  =@page.name
-  %ul{:style => "list-style:none; border: 1px solid black; border-radius: 5px; padding:0px;"}
-    -@album_photos.each do |album|
-      %li{:style => "color:white; background-color: red; border-bottom: 1px solid white; width: 30%; float:left;"}
-        = album[:album_name]
-        %ul
-          - album[:photo].each_with_index do |photo,index|
-            %li{:style => "color:black; background-color:white; list-style:none; padding:0px;"}
-              = photo[:likes_count]
-              = link_to "#{photo[:photo_id]}",photo[:link]
+%h1
+  para todo hay fans
+%ul{:style => "list-style:none; border: 1px solid black; border-radius: 5px; padding:0px;"}
+  - @top_ten.each do |photo|
+    %li{:style => "color:white; background-color: red; border-bottom: 1px solid white; width: 30%; float:left;"}
+      = photo[:likes_count]
+      = link_to "#{photo[:photo_id]}",photo[:link]
