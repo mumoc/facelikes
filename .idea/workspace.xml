@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7215b728-a729-4efa-8880-da8e7a72b5ea" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.haml" afterPath="$PROJECT_DIR$/app/views/home/index.html.haml" />
     </list>
     <ignored path="facelikes.iws" />
@@ -29,7 +30,7 @@
       <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="98" selection-start="938" selection-end="938" vertical-scroll-proportion="0.96428573">
+            <state line="47" column="88" selection-start="821" selection-end="821" vertical-scroll-proportion="0.83928573">
               <folding />
             </state>
           </provider>
@@ -47,7 +48,7 @@
       <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="99" selection-start="2045" selection-end="2045" vertical-scroll-proportion="-20.444445">
+            <state line="48" column="0" selection-start="2050" selection-end="2050" vertical-scroll-proportion="-21.333334">
               <folding />
             </state>
           </provider>
@@ -508,13 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="99" selection-start="2045" selection-end="2045" vertical-scroll-proportion="-20.444445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/all.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="93" selection-start="120" selection-end="120" vertical-scroll-proportion="-1.7777778">
@@ -522,9 +516,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="2050" selection-end="2050" vertical-scroll-proportion="-21.333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="98" selection-start="938" selection-end="938" vertical-scroll-proportion="0.96428573">
+        <state line="47" column="88" selection-start="821" selection-end="821" vertical-scroll-proportion="0.83928573">
           <folding />
         </state>
       </provider>
