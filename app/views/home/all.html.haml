@@ -1,0 +1,5 @@
+%ul
+  - @album_photos.each do |photo|
+    %li
+      = photo[:likes_count]
+      = link_to photo[:photo_id], photo[:link]

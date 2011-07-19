@@ -7,7 +7,8 @@
       - @top_ten.each do |photo|
         %li
           .photo
-            = image_tag photo[:source]
+            .image
+              = image_tag photo[:source]
             .likes
               = photo[:likes_count]
               likes
@@ -40,7 +41,9 @@
     text-align: center;
   }
 
-
+  .image{
+    border: 2px solid white;
+  }
   .photo{
     border-bottom: 2px solid white;
     text-align: left;
