@@ -3,8 +3,8 @@
     = image_tag "/images/header.jpg"
   .content
     %ul
-      %li.wrap
-        #winner
+      #winner
+        %li.wrap
           .photo
             = image_tag @winner[:source]
           .likes
@@ -37,6 +37,9 @@
     }
   }
 
+  ul{
+    padding:0px;
+  }
   li{
    list-style:none;
   }
@@ -48,17 +51,19 @@
 
   li.wrap{
     text-align:center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    width: 60%;
+    margin: 0px auto;
+  }
+  #winner{
+    text-align:center;
+    margin-bottom: 20px;
   }
 
   .content{
     padding: 15px 0px 15px 0px;
     text-align: center;
-  }
-
-  #winner{
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid white;
   }
   .photo{
     text-align:center;

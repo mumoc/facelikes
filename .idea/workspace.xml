@@ -26,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="4" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.6180258">
+            <state line="60" column="21" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="166" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.0">
+            <state line="42" column="166" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.7346939">
               <folding />
             </state>
           </provider>
@@ -426,16 +426,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="166" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.0">
+        <state line="60" column="21" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="4" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.6180258">
+        <state line="42" column="166" selection-start="1955" selection-end="1955" vertical-scroll-proportion="0.7346939">
           <folding />
         </state>
       </provider>
