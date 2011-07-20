@@ -34,8 +34,8 @@ class HomeController < ApplicationController
   end
 
   def index
-    top = [['240949419262945','I'],['240950195929534','I'],['240435805980973','I'],['240586565965897','I'],['240961939261693','II'],
-            ['241622062529014','III'],['241505582540662','III'],['241514569206430','III'],['241601965864357','III'],['241061669251720','II']]
+    top = [['240949419262945','I'],['240950195929534','I'],['240435805980973','I'],['240586565965897','I'],['241622062529014','III'],
+           ['241505582540662','III'],['241514569206430','III'],['241601965864357','III'],['240961939261693','II'],['241061669251720','II']]
     @top_ten = []
     top.each do |photo|
       p = FbGraph::Photo.fetch(photo[0],:fields => "id,link,images")
@@ -48,3 +48,7 @@ class HomeController < ApplicationController
     @top_ten.reverse!
   end
 end
+
+#4 primeras de 1
+#4 primeras de 3
+#2 primeras de 2
