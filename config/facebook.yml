@@ -1,9 +1,9 @@
 development: &defaults
-  app_id: '224220464283059'
-  client_id: '11ef526d51d26838980a9e3428af9f3a'
-  client_secret: '77c6ed615af2da70dfb92e6ccc7ca012'
+  app_id: ''
+  client_id: ''
+  client_secret: ''
   perms: offline_access,manage_pages
-  page_id: '233566540001233'
+  page_id: ''
 
 test:
   <<: *defaults
